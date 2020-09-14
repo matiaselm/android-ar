@@ -70,7 +70,8 @@ class MainActivity : AppCompatActivity() {
         fragment = supportFragmentManager.findFragmentById(R.id.sceneform_fragment) as ArFragment;
 
         val modelUri =
-            Uri.parse("https://github.com/KhronosGroup/glTF-Sample-Models/raw/master/2.0/CesiumMan/glTF/CesiumMan.gltf")
+            //Uri.parse("https://github.com/KhronosGroup/glTF-Sample-Models/raw/master/2.0/CesiumMan/glTF/CesiumMan.gltf")
+            Uri.parse("https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Fox/glTF/Fox.gltf")  // scale(0.005f)
 
         val renderableFuture = ModelRenderable.builder()
             .setSource(
@@ -79,11 +80,11 @@ class MainActivity : AppCompatActivity() {
                     modelUri,
                     RenderableSource.SourceType.GLTF2
                 )
-                    .setScale(0.2f)
+                    .setScale(0.005f)
                     .setRecenterMode(RenderableSource.RecenterMode.ROOT)
                     .build()
             )
-            .setRegistryId("CesiumMan")
+            .setRegistryId("Fox")
             .build()
 
         renderableFuture.thenAccept { it -> testRenderable = it }
