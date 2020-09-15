@@ -71,7 +71,8 @@ class MainActivity : AppCompatActivity() {
 
         val modelUri =
             //Uri.parse("https://github.com/KhronosGroup/glTF-Sample-Models/raw/master/2.0/CesiumMan/glTF/CesiumMan.gltf")
-            Uri.parse("https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Fox/glTF/Fox.gltf")  // scale(0.005f)
+            //Uri.parse("https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Fox/glTF/Fox.gltf")  // scale(0.005f)
+            Uri.parse("rock.gltf")  // scale(0.005f)
 
         val renderableFuture = ModelRenderable.builder()
             .setSource(
@@ -80,7 +81,7 @@ class MainActivity : AppCompatActivity() {
                     modelUri,
                     RenderableSource.SourceType.GLTF2
                 )
-                    .setScale(0.005f)
+                    .setScale(0.5f)
                     .setRecenterMode(RenderableSource.RecenterMode.ROOT)
                     .build()
             )
