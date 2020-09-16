@@ -9,8 +9,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/txt"
         android:textSize="24sp"
-        android:padding="6dp"
-        android:background="@color/colorAccent"
+        android:padding="2dp"
+        android:textColor="@color/white"
+        android:background="@color/colorPopup"
         android:text="@string/img2"  />
 
 </LinearLayout>
