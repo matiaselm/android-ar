@@ -8,29 +8,20 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <fragment
+        android:id="@+id/arimage_fragment"
+        android:name="fi.metropolia.kari.arbasic1.AlmgFrag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/fit_to_scan_img"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="10">
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"
+        android:src="@drawable/fit_to_scan"
+        android:contentDescription="@string/fit_image_to_scan"
+        />
 
-        <fragment
-            android:id="@+id/sceneform_fragment"
-            android:name="com.google.ar.sceneform.ux.ArFragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button" />
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:layout_margin="12dp"
-            android:text="Insert rock"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

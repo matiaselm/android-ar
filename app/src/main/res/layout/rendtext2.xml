@@ -10,6 +10,6 @@
         android:id="@+id/txt"
         android:textSize="24sp"
         android:background="@color/colorAccent"
-        android:text="Sofa!" />
+        android:text="Corals!" />
 
 </LinearLayout>
