@@ -10,7 +10,7 @@ import com.google.ar.core.Config
 import com.google.ar.core.Session
 import com.google.ar.sceneform.ux.ArFragment
 
-class AlmgFrag: ArFragment() {
+class AlmgFrag : ArFragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -29,7 +29,7 @@ class AlmgFrag: ArFragment() {
 
         // Create image database and add it to of session configuration
         val config = super.getSessionConfiguration(session)
-        setupAugmentedImageDatabase(config,session)
+        setupAugmentedImageDatabase(config, session)
         return config
     }
 
@@ -37,14 +37,14 @@ class AlmgFrag: ArFragment() {
         val assetManager = context!!.assets
         val augmentedImageDb: AugmentedImageDatabase = AugmentedImageDatabase(session)
 
-        val inputStream1 = assetManager.open("sofa.jpg")
+        val inputStream1 = assetManager.open("starry.jpg")
         val augmentedImageBitmap1 = BitmapFactory.decodeStream(inputStream1)
 
-        val inputStream2 = assetManager.open("corals.jpg")
+        val inputStream2 = assetManager.open("road.jpg")
         val augmentedImageBitmap2 = BitmapFactory.decodeStream(inputStream2)
 
-        augmentedImageDb.addImage("sofa", augmentedImageBitmap1)
-        augmentedImageDb.addImage("corals",augmentedImageBitmap2)
+        augmentedImageDb.addImage(getString(R.string.img1), augmentedImageBitmap1)
+        augmentedImageDb.addImage(getString(R.string.img2), augmentedImageBitmap2)
 
         if (config != null) {
             config.augmentedImageDatabase = augmentedImageDb

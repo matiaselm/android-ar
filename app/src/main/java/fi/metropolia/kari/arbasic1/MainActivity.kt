@@ -71,7 +71,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 TrackingState.TRACKING -> {
-                    var anchors = it.anchors
+                    val anchors = it.anchors
                     if (anchors.isEmpty()){
                         fitToScanImageView.visibility = View.GONE
                         val pose = it.centerPose
@@ -80,11 +80,11 @@ class MainActivity : AppCompatActivity() {
                         anchorNode.setParent(fragment.arSceneView.scene)
                         val imgNode = TransformableNode(fragment.transformationSystem)
                         imgNode.setParent(anchorNode)
-                        if(it.name=="sofa"){
+                        if(it.name==getString(R.string.img1)){
                             imgNode.renderable = testRenderable
                         }
 
-                        if(it.name=="corals"){
+                        if(it.name==getString(R.string.img2)){
                             imgNode.renderable = testRenderable2
                         }
                     }

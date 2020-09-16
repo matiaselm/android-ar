@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">ARbasic1</string>
     <string name="fit_image_to_scan">Fit image to scan</string>
+    <string name="img1">starry</string>
+    <string name="img2">road</string>
 </resources>
