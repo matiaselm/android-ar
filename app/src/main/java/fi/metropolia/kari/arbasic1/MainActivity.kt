@@ -72,7 +72,7 @@ class MainActivity : AppCompatActivity() {
         val modelUri =
             //Uri.parse("https://github.com/KhronosGroup/glTF-Sample-Models/raw/master/2.0/CesiumMan/glTF/CesiumMan.gltf")
             //Uri.parse("https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Fox/glTF/Fox.gltf")  // scale(0.005f)
-            Uri.parse("rock.gltf")  // scale(0.1f)
+            Uri.parse("euroshopper.gltf")  // scale(0.1f)
 
         val renderableFuture = ModelRenderable.builder()
             .setSource(
